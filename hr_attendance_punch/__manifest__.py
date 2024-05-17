@@ -1,0 +1,35 @@
+# -*- coding: utf-8 -*-
+{
+    'name': "SW - HR Attendance Biometric Device Integration",
+    'summary': """Integration Biometric Devices""",
+    'description': "",
+    'license':  "Other proprietary",
+    'author': "IT Auditors PR, Corp.",
+    'website': "https://www.itauditorspr.com/es",
+    'category': 'Human Resources',
+    'version': '17.0',
+    'depends': ['base', 'hr', 'hr_contract', 'hr_attendance', 'resource', 'mail', 'rating'],
+    'data': [
+        'data/zk_techo_data.xml',
+        'security/biometricdevice_security.xml',
+        'security/ir.model.access.csv',
+        'wizard/upload_employee_views.xml',
+        'wizard/transfer_data_views.xml',
+        'views/res_config_settings_view.xml',
+        'views/hr_attendance_view.xml',
+        'views/biometricdevice_view.xml',
+        'views/hr_extensionview.xml',
+        'wizard/move_attendance_wizard_view.xml',
+        'wizard/generate_missing_attendance.xml',
+        # 'wizard/upload_employee_views.xml',
+        'views/menuitem.xml',
+
+    ],
+    'images':  ["static/description/image.png"],
+    'installable': True,
+    'auto_install': False,
+    'application': False,
+    'external_dependencies': {
+        'python' : ['pyzk'],
+    },
+}
